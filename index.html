@@ -13,7 +13,8 @@
 
     }
     body{
-        background:linear-gradient(to bottom , black ,rgb(30,30,30) 60%)
+        background:linear-gradient(to bottom , black ,rgb(30,30,30) 60%);
+
     }
     #cabecalho{
         color: white;
@@ -28,7 +29,10 @@
 
         
     }
-    #cabecalho>h1{
+    
+    #cabecalho>a{
+        text-decoration: none;
+        color: white;
         width: fit-content;
         margin-top: 1rem;
         padding: 5px;
@@ -36,17 +40,17 @@
         transition: .6s;
     }
     @media (max-width:594px){
-        #cabecalho>h1{
+        #cabecalho>a>h1{
             font-size: large;
         }
         
     }
     @media (max-width:357px){
-        #cabecalho>h1{
-            font-size: medium;
+        #cabecalho>a>h1{
+            font-size: large;
         }
     }
-    #cabecalho>h1:hover{
+    #cabecalho>a:hover{
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -57,6 +61,7 @@
    
     
     #video{
+
         height: 100vh;
 display: flex;
 justify-content: center;
@@ -84,6 +89,12 @@ animation: move 10s alternate infinite linear;
 
         }
     }
+    #cadete{
+        width: 40%;
+        border: 2px solid white;
+        box-shadow: 1px 1px 5px 1px white;
+        margin-bottom: 1rem;
+    }
     .lulp{
         background-image: url(back.webp);
         height: 100vh;
@@ -96,7 +107,8 @@ animation: move 10s alternate infinite linear;
 
     }
    #MYSELF{
-    height: fit-content;
+    height: 30%;
+    overflow-y: scroll;
     display: flex;
     color: white;
     justify-content: center;
@@ -111,6 +123,17 @@ animation: move 10s alternate infinite linear;
     border-radius: 10px;
     
  }
+ #MYSELF::-webkit-scrollbar{
+    width: 15px
+}
+#MYSELF::-webkit-scrollbar-thumb{
+    background-color: red;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(cadete.jpg);
+    border-radius: 20px;
+}
    #MYSELF>h2{
     display: flex;
     justify-content: center;
@@ -118,12 +141,30 @@ animation: move 10s alternate infinite linear;
   
     
    }
-   @media (max-width:455px){
+   @media (max-width:900px){
+    #cadete{
+        width: 80%;    
+        }
     #MYSELF{
+    width: fit-content;
 margin-inline: 10%;
     }
     #MYSELF>h2{
+        margin-top: 10rem;
         font-size: large;
+    }
+   }
+   @media (max-width:527px){
+    #MYSELF>h2{
+        margin-top: 15rem;
+    }
+   }
+   @media(max-width:455px){
+    #MYSELF{
+        height: 60%;
+    }
+    #MYSELF>h2{
+margin-top: 15rem;
     }
    }
 /* SEGUNDA PARTE */
@@ -139,6 +180,7 @@ margin-inline: 10%;
 }
 
 .realContent{
+
     width: 50vw;
     height: 50vh;
     position: relative;
@@ -435,6 +477,106 @@ grid-column: 2/2;
     grid-row: 3;
 
 }
+@media (max-width:843px){
+    .conteudo2{
+        grid-template-columns: repeat(3,1fr);
+grid-template-rows: auto;
+padding: 5px;
+row-gap: 5px;
+column-gap: 5px;}
+
+    
+        .c1{
+    grid-row: 1;
+   grid-column: 2/2;
+}
+.c2{
+    grid-column: 1/1;
+    grid-row: 2;
+
+}
+.c3{
+    grid-column: 2/2;
+    grid-row: 2;
+
+}
+.c4{
+    grid-column: 3/3;
+    grid-row: 2;
+
+}
+.c5{
+    grid-row: 3;
+
+}
+.c6{
+    grid-row: 3;
+    grid-column: 2/2;
+
+}
+.c7{
+    grid-row: 3;
+    grid-column: 3/3;
+
+}
+.c8{
+    grid-row: 4;
+    grid-column: 2/2;
+    }
+}
+@media (max-width:529px){
+    .conteudo2{
+        grid-template-columns: repeat(1,1fr);
+grid-template-rows: auto;
+padding: 5px;
+row-gap: 5px;
+column-gap: 5px;
+    }
+    .new{
+font-size: medium;
+display: flex;
+justify-content: center;
+align-items: center;}
+        .c1{
+    grid-row: 1;
+   grid-column: 1/1;
+}
+.c2{
+    grid-column: 1/1;
+    grid-row: 2;
+
+}
+.c3{
+    grid-column: 1/1;
+    grid-row: 3;
+
+}
+.c4{
+    grid-column: 1/1;
+    grid-row: 4;
+
+}
+.c5{
+    grid-row: 5;
+    grid-column: 1/1;
+
+}
+.c6{
+    grid-row: 6;
+    grid-column: 1/1;
+
+}
+.c7{
+    grid-row: 7;
+    grid-column: 1/1;
+
+}
+.c8{
+    grid-row: 8;
+    grid-column: 1/1;
+    }
+}
+
 .caixa2{
     flex-wrap: wrap;
     display: flex;
@@ -445,15 +587,78 @@ grid-column: 2/2;
     text-decoration: none;
     color: aliceblue;
 }
+html{
+    scroll-behavior: smooth ;
+}
+#lulp4{
+    
+    background-image: url(universo.jpg);
+        min-height: 100vh;
+        display: flex;
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+}
+.car{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style:preserve-3d;
+    animation: animate 20s linear infinite;
+}
+@media (max-width:659px){
+    .car{
+        width: 150px;
+        height: 150px;
+    }
+    .car span{
+        transform: rotateY(calc(var(--i)*45deg)) translateZ(100px);
+    }
+    @keyframes animate{
+    0%{
+        transform: perspective(100px) rotateY(0deg);
+    }100%{
+        transform: perspective(100px) rotateY(360deg);
+    }
+}
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.car span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004);
+}
+.car span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 </style>
 <body>
     <header>
  <div id="cabecalho">
-<h1>HOME</h1>
-<h1>MYSELF</h1>
-<h1>ABOUT</h1>
-<h1>CONTATOS</h1>
- </div>
+<a href="#video"><h1>HOME</h1></a>
+<a href="#lulp"><h1>HISTÓRICO</h1></a>
+<a href="#lulp2"><h1>CONTEÚDO</h1></a>
+<a href="#lulpFinal"><h1>CLC</h1></a> </div>
  
     </header>
     <main>
@@ -462,17 +667,42 @@ grid-column: 2/2;
 CCAER PARALELO
 </h1>
 </div>
-<section class="lulp">
-    <img src="" alt="imagem">
+<section class="lulp" id="lulp">
+    <img src="cadete.jpg" alt="imagem" id="cadete">
 
 <div id="MYSELF">
-       <h2> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam laboriosam ipsum ut aliquid inventore, facere accusantium cupiditate
-         expedita provident? Repudiandae nulla rerum ut fuga accusamus velit maiores excepturi voluptatem error consequatur quis fugiat dolorum 
-         impedit eveniet odit vero, voluptas porro incidunt modi labore
-         ducimus minus beatae veritatis. Atque odit dolorem consectetur molestias in est voluptatum. Fuga deleniti maiores ad molestiae. </h2>
+       <h2> Desde 31 de março de 1941, nos primórdios da inauguração da então Escola de Aeronáutica (EAer), 
+        no Campo dos Afonsos/RJ, o Corpo de Cadetes da Aeronáutica (CCAer), sob o comando do Maj Av Dario 
+        Cavalcante de Azambuja, tem atuado na Academia com a missão de auxiliar nos assuntos relativos à formação militar,
+         moral, cívica e social dos Cadetes.
+ <br><br>
+        No entanto, em 1971, a partir da mudança definitiva da Academia da Força Aérea para a cidade de Pirassununga/SP, o CCAer também foi
+         transferido para a nova sede no dia 27 de setembro de 1971, sob o Comando do Ten Cel Av Arthur Soares de Almeida, Comandante do CCAer
+          na época. A partir de então, o CCAer mantem até hoje esse importante
+         trabalho na formação dos Oficiais da Força Aérea Brasileira dos quadros de Aviação, Intendência e Infantaria da Aeronáutica. </h2>
+</div>
+
+</section>
+
+<section>
+    <div id="lulp4">
+       
+
+    <div class="car">
+        <span style="--i:1"><img src="logo afa.gif" alt=""></span>
+        <span style="--i:2"><img src="marcha2.jpg" alt=""></span>
+        <span style="--i:3"><img src="marcha.jpg" alt=""></span>
+        <span style="--i:4"><img src="formados.jpg" alt=""></span>
+        <span style="--i:5"><img src="ccaer.jpg" alt=""></span>
+        <span style="--i:6"><img src="t-25.jpg" alt=""></span>
+        <span style="--i:7"><img src="mostrando.jpg" alt=""></span>
+        <span style="--i:8"><img src="cadete.jpg" alt=""></span>
+
+    </div>
+
 </div>
 </section>
-<section class="lulp2">
+<section class="lulp2" id="lulp2">
     <div class="realContent">
         <div class="slides">
 
@@ -504,7 +734,7 @@ CCAER PARALELO
 
     
 </section>
-<section class="lulp3">
+<section class="lulp3" id="lulp3">
 
     <div class="Box3">
         <div class="conteudo">
@@ -540,9 +770,7 @@ CCAER PARALELO
 </div>
     </section>
 
-    </main>
-
-    <section class="lulpFinal">
+    <section class="lulpFinal" id="lulpFinal">
 
     
         <div class="new">
@@ -550,8 +778,7 @@ CCAER PARALELO
      </div>
      <div class="Box3">
         <div class="conteudo2">
-            <h1 class="caixa2 c1">LCA - SÁ</h1>
-            
+            <h1 class="caixa2 c1">LCC - SÁ</h1>
             <h1 class="caixa2 c2">LAv - MATHEUS</h1>
             <h1 class="caixa2 c3">Lint - SABRINA</h1>
             <h1 class="caixa2 c4">Linf - PASSOS</h1>
@@ -565,5 +792,8 @@ CCAER PARALELO
             </div>
             </div>
         </section>
+    </main>
+
+    
 </body>
 </html>
