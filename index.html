@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
     *{
         margin: 0;
         padding: 0;
@@ -265,7 +267,7 @@ margin-top: 15rem;
     }
 }
 
-input{
+.radio{
     display: none;
 }
 .slides{
@@ -695,6 +697,47 @@ html{
    
    
 }
+
+.l1{
+filter: drop-shadow(1px 5px 1rem black);
+}
+.l2{
+filter: drop-shadow(1px 5px 1rem lightgreen);
+}
+.l3{
+filter: drop-shadow(1px 5px 1rem blue);
+}
+    
+#flip-book{
+    margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto", sans-serif;
+	background: url(univers.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transform-style: preserve-3d;
+
+}
+
+.livro{
+    position: absolute;
+    filter: drop-shadow(5px 5px 1rem white);
+    text-decoration: none;
+    color: white;
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    transform: skewY(3deg) translateZ(1000px) rotateY(30deg) skewX(-2deg);
+    z-index: 2;
+    height: 50vh;
+    width: fit-content;
+
+}
+
 footer{
     height: 35vh;
     width: 100%;
@@ -704,20 +747,13 @@ footer{
     background-image: url(universo.jpg);
     background-position: center;
     background-size: cover;
+    flex-direction: row;
     
 }
+
 .imgfoot{
     width: 200px;
 
-}
-.l1{
-filter: drop-shadow(1px 5px 1rem black);
-}
-.l2{
-filter: drop-shadow(1px 5px 1rem lightgreen);
-}
-.l3{
-filter: drop-shadow(1px 5px 1rem blue);
 }
 @media (max-width:600px){
  .imgfoot{
@@ -740,7 +776,7 @@ footer{
     <main>
 <div id="video">
 <h1>
-CCAER PARALELO
+CCAER 
 </h1>
 </div>
 <section class="lulp" id="lulp">
@@ -782,9 +818,9 @@ CCAER PARALELO
     <div class="realContent">
         <div class="slides">
 
-        <input type="radio" name="radio" id="radio1" checked>
-        <input type="radio" name="radio" id="radio2">
-        <input type="radio" name="radio" id="radio3">
+        <input type="radio" name="radio" id="radio1" checked class="radio">
+        <input type="radio" name="radio" id="radio2" class="radio">
+        <input type="radio" name="radio" id="radio3" class="radio">
             <div class="imagem s1">
                 <h1 class="texto"> <img src="t-27.png" alt="" style="width: 250px;filter: drop-shadow(1px 1px 1rem white);">
                   </svg><br> 1º EIA <br><br><a href="https://drive.google.com/drive/u/0/folders/1QNbHU7_nW0u8enpKM_YrLwalSRwqBnKu" id="ancoraSLIDE" target="_blank">Banco de Conhecimentos</a></h1>           
@@ -884,6 +920,12 @@ CCAER PARALELO
             </div>
             </div>
         </section>
+      
+        <section id="flip-book">
+
+          <a href="https://online.fliphtml5.com/onxgz/zzst/index.html#p=1" target="_blank"   class="livro"> <img src="capa sabre.png" alt="" style="width: 100%;height: 100%;"> </a>
+        </section>
+
     </main>
 
     <footer>
@@ -891,7 +933,7 @@ CCAER PARALELO
         <img src="athos logo.png"  class="imgfoot l1" alt="">
         <img src="artemis logo.png"  class="imgfoot l2" alt="">
         <img src="arion logo.png"  class="imgfoot l3" alt="">
-       
+   
     </footer>
 </body>
 </html>
