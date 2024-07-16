@@ -203,8 +203,8 @@ margin-top: 15rem;
 
 .realContent{
 
-    width: 60vw;
-    height: 60vh;
+    width: 80vw;
+    height: 80vh;
     position: relative;
     background-color: transparent;
     backdrop-filter: blur(5px);
@@ -242,7 +242,7 @@ margin-top: 15rem;
 .imagem{
     flex-wrap: wrap;
     display: flex;
-    width: 33.3%;
+    width: 25%;
     transition: .6s;
     padding: 20px;
 }
@@ -288,17 +288,20 @@ margin-top: 15rem;
 }
 .slides{
     display: flex;
-    width: 300%;
+    width: 400%;
     height: 100%;
 }
 #radio1:checked~.s1{
     margin-left: 0;
 }
 #radio2:checked~.s1{
-    margin-left: -33.3%;
+    margin-left: -25%;
 }
 #radio3:checked~.s1{
-    margin-left: -66.3%;
+    margin-left: -50%;
+}
+#radio4:checked~.s1{
+    margin-left: -75%;
 }
 
 .texto{
@@ -1066,6 +1069,8 @@ CCAER
         <input type="radio" name="radio" id="radio1" checked class="radio">
         <input type="radio" name="radio" id="radio2" class="radio">
         <input type="radio" name="radio" id="radio3" class="radio">
+        <input type="radio" name="radio" id="radio4" class="radio">
+
             <div class="imagem s1">
                 <h1 class="texto"> <img src="t-27.png" alt="" style="width: 250px;filter: drop-shadow(1px 1px 1rem white);">
                   </svg><br> 1º EIA <br><br><a href="https://drive.google.com/drive/u/0/folders/1QNbHU7_nW0u8enpKM_YrLwalSRwqBnKu" id="ancoraSLIDE" target="_blank">Banco de Conhecimentos</a></h1>           
@@ -1077,11 +1082,18 @@ CCAER
                     <img src="orthrus logo.png" style="width: 200px;filter: drop-shadow(1px 5px 2rem white);" alt="">
                     <br>
                     <a href="https://drive.google.com/drive/folders/1BiFedq4HpOAb5Vrmix7e7w4bQ3EX3W2g" id="ancoraSLIDE" target="_blank">Provas orthrus 3º</a></h1>                       </div>
+                    <div class="imagem">
+                        <h1 class="texto">
+                            <img src="rede bia.png" style="width: 200px;filter: drop-shadow(1px 5px 2rem white);" alt="">
+                            <br>
+                            <a href="https://catalogo.redebia.fab.mil.br/" id="ancoraSLIDE" target="_blank">Rede BIA login/senha: saram</a></h1>                       </div>
                 </div>
             <div class="navibar">
                 <label for="radio1" class="label"></label>
                 <label for="radio2" class="label"></label>
                 <label for="radio3" class="label"></label>
+                <label for="radio4" class="label"></label>
+
             </div>
         </div>
         
